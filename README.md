@@ -1,9 +1,9 @@
 # InspireNoteWebsite
 𝟭. 𝗜𝗻𝘁𝗿𝗼𝗱𝘂𝗰𝘁𝗶𝗼𝗻:
     InspireNote is a platform that allows indiviuals to write a blog on particular topic and also make notes.This website includes two main Parts:
-    A) 𝗕𝗹𝗼𝗴 𝗪𝗿𝗶𝘁𝗶𝗻𝗴 -
+    1) 𝗕𝗹𝗼𝗴 𝗪𝗿𝗶𝘁𝗶𝗻𝗴 -
     It allows user to write a blog and also style it according to the need and add the multimedia elements into it. The features of blog are explained below.
-    b) 𝗡𝗼𝘁𝗲𝘁𝗮𝗸𝗲 -
+    2) 𝗡𝗼𝘁𝗲𝘁𝗮𝗸𝗲 -
     This website provides a simple note taking tool wherein user can add his notes.
     As it is completely a blog and note taking website its color theme includes black,white,gery (inspired by other blog writing and note taking websites.
 
