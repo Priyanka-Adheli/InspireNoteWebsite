@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Note Taking Page</title>
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Bootstrap 5.2 version CDN Link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+    <!-- Bootstrap 5.2 version Script CDN Link -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+    <!-- Font Awesome Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-xl">
+        <div class="container-fluid">
+            <a href="#" class="navbar-brand">
+                InspireNote
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle Navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link fs-4 ">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="blogs.html" class="nav-link fs-4 "> Blogs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="notes.html" class="nav-link fs-4 ">Notes</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle fs-4 " data-bs-toggle="dropdown"
+                            data-bs-target="#toggleDropDown" aria-expanded="false" role="button">Starting Writing</a>
+                        <ul class="dropdown-menu" id="toggleDropDown">
+                            <li><a class="dropdown-item " href="blogWriting.html">Blog Writing</a></li>
+                            <li><a class="dropdown-item " href="NoteTake.html">Note Taking</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Main container -->
+    <div class="container h-100 d-flex flex-column justify-content-center align-items-center">
+        <div class="display-6 mb-2">Start Taking your Notes From Now...</div>
+        <!-- Div with basic note taking tools icon -->
+        <div class="iconBox d-flex justify-content-around align-items-center mb-5">
+            <div class="icon"><button class="btn btn-light options" id="bold"><i class="fa fa-bold"></i></button></div>
+            <div class="icon"><button class="btn btn-light options" id="undo"><i class="fa fa-undo"></i></button></div>
+            <div class="icon"><button class="btn btn-light options" id="redo"><i class="fa fa-redo"></i></button></div>
+            <div class="icon"><button class="btn btn-light options" id="insertOrderedList"><i
+                        class="fa fa-list-ol"></i></button></div>
+            <div class="icon"><button class="btn btn-light options" id="insertUnorderedList"><i
+                        class="fa fa-list-ul"></i></button></div>
+        </div>
+        <!-- Note writing div -->
+        <div class="notesection shadow" contenteditable="true" id="note"></div>
+    </div>
+    <!-- Buttons -->
+    <div class="d-flex justify-content-center align-items-center">
+        <button class="optionBtn" id="saveBtn">Save</button>
+        <button class="optionBtn" id="closeBtn">Close</button>
+    </div>
+    <!-- Js script for this Page -->
+    <script src="NoteTake.js"></script>
+</body>
+
+</html>

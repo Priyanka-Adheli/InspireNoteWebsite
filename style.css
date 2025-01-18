@@ -1,0 +1,329 @@
+/*Importing the requried font from Google fonts  */
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Modak&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Modak&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.navbar {
+    z-index: 3;
+}
+.navbar-nav .nav-link{
+    color: black;
+    border-radius: 16px;
+}
+.navbar-nav .nav-link:hover{
+    text-decoration: underline;
+}
+.dropdown-menu .dropdown-item{
+    color: black;
+}
+/* Styling the main window */
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    z-index: 13;
+}
+
+/* Pop up animation */
+#fun {
+    opacity: 0;
+    transform: scale(0.5);
+}
+
+@keyframes popUp {
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/*Styling the box with glass effect  */
+.box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    position: relative;
+    z-index: 2;
+    border-radius: 10px;
+    padding: 20px;
+    /* Glass effect code */
+    background: linear-gradient(0deg, rgba(191, 189, 189, 0.5), rgba(255, 255, 255, 0.1));
+    -webkit-backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    font-size: large;
+}
+
+/* Setting default styles to text-container div */
+.text-container {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    overflow: hidden;
+}
+
+/*  Setting default styles to text divs*/
+.text-container>div {
+    position: absolute;
+    opacity: 0;
+    height: 250px;
+    width: 300px;
+    animation: magic linear 10s infinite;
+}
+
+/* Setting animation timing and text apperance position of textdivs */
+.text-container>div:nth-child(1) {
+    top: 0vh;
+    left: 30vw;
+    animation-delay: 0s;
+}
+
+.text-container>div:nth-child(2) {
+    top: 30vh;
+    left: 50vw;
+    animation-delay: 4s;
+}
+
+.text-container>div:nth-child(3) {
+    top: 70vh;
+    left: 10vw;
+    animation-delay: 2s;
+}
+
+.text-container>div:nth-child(4) {
+    top: 70vh;
+    left: 70vw;
+    animation-delay: 7s;
+}
+
+.text-container>div:nth-child(5) {
+    top: 10vh;
+    left: 60vw;
+    animation-delay: 5s;
+}
+
+.text-container>div:nth-child(6) {
+    top: 10vh;
+    left: 30vw;
+    animation-delay: 1s;
+}
+
+.text-container>div:nth-child(7) {
+    top: 20vh;
+    left: 20vw;
+    animation-delay: 8s;
+}
+
+/* Animation implementation */
+@keyframes magic {
+    0% {
+        transform: scale3d(0, 0, 1) rotate(0.02deg);
+        opacity: 0;
+        filter: blur(10px);
+    }
+
+    25% {
+        transform: scale3d(1, 1, 1) rotate(0.02deg);
+        opacity: 1;
+        filter: blur(0px);
+    }
+
+    40% {
+        opacity: 1;
+        filter: blur(0px);
+    }
+
+    80% {
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale3d(3, 3, 1) rotate(0.02deg);
+        opacity: 0;
+        filter: blur(10px);
+    }
+}
+
+.CustColor1{
+    color:black !important;
+}
+
+.CustColor1.active{
+    color:rgb(83, 83, 83) !important;
+}
+/* Styling the components of blogWriting.html and advFormatOption.html */
+
+/* Sidebar Style */
+.sidebar {
+    padding: 20px;
+}
+
+/* Option btns style */
+.option-btns {
+    background-color: #e0e0e0;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    text-decoration: none;
+    height: 50px;
+    width: 200px;
+}
+
+/* Sub-option btns style */
+.sub-option-btns {
+    background-color: #c0c0c0;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    text-decoration: none;
+    height: 50px;
+    width: 150px;
+}
+
+/* Input Field Style */
+.inputs {
+    width: 200px;
+    height: 50px;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    border: 2px solid #c0c0c0;
+}
+
+/* To adjust the buttons and input field width in screen size (990-1151 px) */
+@media (min-width: 990px) and (max-width: 1151px) {
+
+    .option-btns,
+    .inputs {
+        width: 160px !important;
+    }
+}
+
+/* Adding style to blog-title div and blog-content div */
+.blog-title,
+.blog-content {
+    padding: 20px;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.blog-content {
+    height: 60vh;
+    overflow: scroll;
+}
+
+/* Scrollbar visible none */
+.blog-content::-webkit-scrollbar {
+    display: none;
+}
+
+/* Style to blogBox div */
+.blogBox {
+    background-color: white;
+    position: relative;
+    height: 690px;
+    border-radius: 10px;
+    padding: 20px;
+    background-position: center;
+    background-size: cover;
+}
+
+#all-blogs-content,
+#tech-tab-content,
+#fashion-tab-content,
+#spiritual-tab-content {
+    padding: 20px;
+}
+
+/* Styling for hash  */
+.hashStyle {
+    position: relative;
+    font-size: 17px;
+}
+
+/* badge style */
+.badgeStyle {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+/* author style  */
+.authorStyle {
+    position: absolute;
+    right: 0;
+    bottom: 35px;
+    font-size: 20px;
+}
+
+/* dateTime Style */
+.dateTimeStyle{
+position:absolute;
+right:0;
+bottom:10px;
+font-size:20px;
+}
+
+/* Styling the notes.html */
+.iconBox {
+    max-width: 700px;
+    height: 80px;
+    width: 80%;
+    padding: 20px;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+}
+
+/* Setting icon size */
+.icon {
+    width: 30px;
+    height: 30px;
+}
+
+.icon:hover {
+    background-color: #c0c0c0;
+}
+
+.notesection {
+    padding: 20px;
+    width: 80%;
+    max-width: 700px;
+    height: auto;
+    border: 2px solid rgb(234, 228, 228);
+    border-radius: 10px;
+    outline: none;
+}
+
+.notesection:focus {
+    border: 2px solid rgb(207, 205, 205);
+}
+
+.optionBtn {
+    margin: 20px;
+    width: 100px;
+    height: 50px;
+    background-color: #c0c0c0;
+    border: 2px solid #c0c0c0;
+    border-radius: 10px;
+}
